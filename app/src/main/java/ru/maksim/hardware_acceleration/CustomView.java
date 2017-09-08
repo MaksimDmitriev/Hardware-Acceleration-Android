@@ -13,8 +13,6 @@ import android.view.View;
 
 public class CustomView extends View {
 
-    private static final String TAG = "CustomView";
-
     public CustomView(Context context) {
         super(context);
     }
@@ -31,13 +29,13 @@ public class CustomView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        Log.d(TAG, "onMeasure");
+        Log.d(MainActivity.TAG, getClass() + "#onMeasure");
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        Log.d(TAG, "onDraw");
         super.onDraw(canvas);
+        Log.d(MainActivity.TAG, getClass() + "#onDraw");
     }
 }

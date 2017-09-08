@@ -31,13 +31,13 @@ public class CustomView2 extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        Log.d(TAG, "onMeasure");
+        Log.d(MainActivity.TAG, getClass() + "#onMeasure");
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        Log.d(TAG, "onDraw");
         super.onDraw(canvas);
+        Log.d(MainActivity.TAG, getClass() + "#onDraw");
     }
 }
